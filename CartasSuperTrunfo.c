@@ -7,8 +7,8 @@
 
 // Definindo a struct Cidade
 struct Cidade {
-    char chaEstado[1]; 
-    char chaCodigo[3]; 
+    char chaEstado[2]; 
+    char chaCodigo[4]; 
     char chaNomeCidade[50];
     unsigned long int intPopulacao;
     float floArea;
@@ -31,9 +31,10 @@ int main() {
     struct Cidade cidadeA01;
 
     printf("Digite o estado da Cidade A01: ");
-    scanf("%c", &cidadeA01.chaEstado);
+    scanf("%s", &cidadeA01.chaEstado);
     printf("Digite o código da Cidade A01: ");
-    scanf("%c", &cidadeA01.chaCodigo);
+    scanf("%s", &cidadeA01.chaCodigo);
+    getchar(); // Limpa o \n do buffer
     printf("Digite o nome da Cidade A01: ");
     fgets(cidadeA01.chaNomeCidade,50,stdin);
     printf("Digite a populacao da Cidade A01: ");
@@ -58,9 +59,10 @@ int main() {
     struct Cidade cidadeB02;
 
     printf("Digite o estado da Cidade B02: ");
-    scanf("%c", &cidadeB02.chaEstado);
+    scanf("%s", &cidadeB02.chaEstado);
     printf("Digite o código da Cidade B02: ");
-    scanf("%c", &cidadeB02.chaCodigo);
+    scanf("%s", &cidadeB02.chaCodigo);
+    getchar(); // Limpa o \n do buffer
     printf("Digite o nome da Cidade B02: ");
     fgets(cidadeB02.chaNomeCidade,50,stdin);
     printf("Digite a populacao da Cidade B02: ");
@@ -88,8 +90,8 @@ int main() {
 
     printf("\n********* CIDADE A01 ****************\n");
     printf("Carta 1\n");
-    printf("Estado %c\n", cidadeA01.chaEstado);
-    printf("Código %c\n", cidadeA01.chaCodigo);
+    printf("Estado %s\n", cidadeA01.chaEstado);
+    printf("Código %s\n", cidadeA01.chaCodigo);
     printf("Nome: %s", cidadeA01.chaNomeCidade);
     printf("Populacao: %lu\n", cidadeA01.intPopulacao);
     printf("Área: %.2f km²\n", cidadeA01.floArea);
@@ -101,8 +103,8 @@ int main() {
 
     printf("\n********* CIDADE B02 ****************\n");
     printf("Carta 2\n");
-    printf("Estado %c\n", cidadeB02.chaEstado);
-    printf("Código %c\n", cidadeB02.chaCodigo);   
+    printf("Estado %s\n", cidadeB02.chaEstado);
+    printf("Código %s\n", cidadeB02.chaCodigo);   
     printf("Nome: %s", cidadeB02.chaNomeCidade);
     printf("Populacao: %lu\n", cidadeB02.intPopulacao);
     printf("Área: %.2f km²\n", cidadeB02.floArea);
